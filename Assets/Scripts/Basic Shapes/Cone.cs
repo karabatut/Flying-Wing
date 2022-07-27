@@ -44,7 +44,7 @@ public class Cone : Part
 
         List<Vector3> corners = new List<Vector3>();
 
-        Vector3 tipPoint = new Vector3(0f, 0f, 0f);
+        Vector3 tipPoint = new Vector3(0f, length/2, 0f);
 
         Vector3 basePoint = new Vector3(tipPoint.x + baseRadius, tipPoint.y - length, 0f);
 
@@ -65,7 +65,7 @@ public class Cone : Part
                     if ((Vector3.Distance(origin, temp) <= tempRadius) && (Vector3.Distance(origin, temp) >= (previousRadius-1.5f)))
                     {
                         corners.Add(temp);
-                        if(position.y == length / 2)
+                        if(position.y == 0)
                         {
                             middlePoint = temp.x;
                         }
