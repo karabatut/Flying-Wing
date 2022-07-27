@@ -52,7 +52,7 @@ public class PartCreator : MonoBehaviour
 
             Part newPart = part.CreatePart(node.GetFirstParameter(), node.GetSecondParameter(), node.GetThirdParameter(), node.GetFourthParameter());
 
-            foreach (Vector3 point in newPart.sideSnapPoints)
+            /*foreach (Vector3 point in newPart.sideSnapPoints)
             {
                 GameObject go = Instantiate(new GameObject(), point, Quaternion.identity);
             }
@@ -60,7 +60,7 @@ public class PartCreator : MonoBehaviour
             foreach (Vector3 point in newPart.frontSnapPoints)
             {
                 GameObject go = Instantiate(new GameObject(), point, Quaternion.identity);
-            }
+            }*/
 
             partObject.AddComponent<MeshFilter>();
             partObject.AddComponent<MeshRenderer>();
@@ -144,6 +144,7 @@ public class PartCreator : MonoBehaviour
                 {
                     int snapCountConnected = item.connectedObject.sideSnapPoints.Count;
                     int randomsnapConnected = Random.Range(0, snapCountConnected);
+                    randomsnapConnected = 5;
                     connectingPoint = item.connectedObject.sideSnapPoints[randomsnapConnected];
                     connectingPoint = connectingPoint + connectedObjPos;
 
@@ -164,22 +165,19 @@ public class PartCreator : MonoBehaviour
                 {
                     int snapCountThisObj = item.thisObject.sideSnapPoints.Count;
                     int randomsnapThisObj = Random.Range(0, snapCountThisObj);
+                    randomsnapThisObj = 0;
 
                     Vector3 translateVector = connectingPoint - item.thisObject.sideSnapPoints[randomsnapThisObj];
                     Vector2 thisObjectPos = new Vector2(item.thisObject.sideSnapPoints[randomsnapThisObj].x + translateVector.x, item.thisObject.sideSnapPoints[randomsnapThisObj].z + translateVector.z);
                     item.thisObject.partObject.transform.Translate(translateVector);
                     
 
-                    Vector2 connectedPositionNormal = new Vector2(connectingPoint.x - connectedObjPos.x, connectingPoint.z - connectedObjPos.z);
-                    Vector2 thisPositionNormal = new Vector2(item.thisObject.partObject.transform.position.x - connectingPoint.x, item.thisObject.partObject.transform.position.z - connectingPoint.z);
+                    Vector3 connectedPositionNormal = new Vector3(connectingPoint.x - connectedObjPos.x,0, connectingPoint.z - connectedObjPos.z);
+                    Vector3 thisPositionNormal = new Vector3(item.thisObject.partObject.transform.position.x - connectingPoint.x,0, item.thisObject.partObject.transform.position.z - connectingPoint.z);
 
-                    float angle = Vector3.Angle(thisPositionNormal, connectedPositionNormal);
-                    item.thisObject.partObject.transform.RotateAround(connectingPoint, new Vector3(0f, 1, 0f), angle);
-                    /*Vector2 connectedObjectPos = new Vector2(-connectingPoint.x, -connectingPoint.z);
-                    Debug.Log(connectedObjectPos);
-                    float angle = Vector3.Angle(connectedObjectPos, thisObjectPos);
+                    float angle = Vector3.SignedAngle(connectedPositionNormal, thisPositionNormal, Vector3.up);
                     Debug.Log(angle);
-                    item.thisObject.partObject.transform.RotateAround(connectingPoint, new Vector3(0f, 1, 0f), angle);*/
+                    item.thisObject.partObject.transform.RotateAround(connectingPoint, new Vector3(0f, 1, 0f), -angle);
                 }
                 else 
                 {
