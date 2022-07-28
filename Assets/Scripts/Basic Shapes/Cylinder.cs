@@ -57,7 +57,7 @@ public class Cylinder : Part
             int x = (int)(radius * Mathf.Cos(angle * Mathf.Deg2Rad));
             int z = (int)(radius * Mathf.Sin(angle * Mathf.Deg2Rad));
 
-            Vector3 temp = new Vector3(x, 0f, z);
+            Vector3 temp = new Vector3(x, -length/2, z);
             corners[i] = temp;
         }
 
@@ -83,7 +83,7 @@ public class Cylinder : Part
             foreach (Vector3 position in line)
             {
                 Vector3 temp = position;
-                for (int j = 0; j < length; j++)
+                for (int j = -length/2; j < length/2; j++)
                 {
                     part = meshCreator.AddVoxelToChunk(temp, this);
                     this.vertices = part.vertices;
@@ -93,7 +93,7 @@ public class Cylinder : Part
                     this.vertices = part.vertices;
                     temp.y++;
 
-                    if ((j == length / 2))
+                    if ((j == 0))
                     {
                         if(count == sideLength / 2)
                         {
@@ -112,8 +112,8 @@ public class Cylinder : Part
         }
 
         
-        this.frontSnapPoints.Add(new Vector3(0f, length, 0f));
-        this.frontSnapPoints.Add(new Vector3(0f, 0f, 0f));
+        this.frontSnapPoints.Add(new Vector3(0f, length/2, 0f));
+        this.frontSnapPoints.Add(new Vector3(0f, -length / 2, 0f));
 
         return meshCreator.CreateMesh(this);
     }

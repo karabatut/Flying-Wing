@@ -9,9 +9,11 @@ public class ConeNode : BaseNode
     [Input] public bool sideSnap;
     [Input] public bool frontSnap;
     [Input] public bool aftSnap;
+    [Input] public bool centerSnap;
     [Output] public bool exitSideSnap;
     [Output] public bool exitFrontSnap;
     [Output] public bool exitAftSnap;
+    [Output] public bool exitCenterSnap;
 
     public int lengthMin;
     public int lengthMax;
@@ -60,6 +62,10 @@ public class ConeNode : BaseNode
         if (GetPort("aftSnap").GetInputValue<bool>())
         {
             snappingEnum = SnappingEnum.SNAP_AFT;
+        }
+        if (GetPort("centerSnap").GetInputValue<bool>())
+        {
+            snappingEnum = SnappingEnum.SNAP_CENTER;
         }
         return snappingEnum;
     }

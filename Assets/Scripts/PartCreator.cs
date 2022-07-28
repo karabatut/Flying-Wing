@@ -122,6 +122,17 @@ public class PartCreator : MonoBehaviour
                         partsTree.addPartToTree(partsOfNodes[tempNode], partsOfNodes[partsOfNodes.ElementAt(j).Key]);
                     }
                 }
+                if (partsOfNodes.ElementAt(j).Key.GetInputPort("centerSnap").Connection != null)
+                {
+                    BaseNode tempNode = partsOfNodes.ElementAt(j).Key.GetInputPort("centerSnap").Connection.node as BaseNode;
+                    if (partsTree.contains(partsOfNodes[tempNode]) && !partsTree.contains(partsOfNodes[partsOfNodes.ElementAt(j).Key]))
+                    {
+                        NodePort port = partsOfNodes.ElementAt(j).Key.GetInputPort("centerSnap").Connection;
+                        partsOfNodesConnected.Add(partsOfNodes[partsOfNodes.ElementAt(j).Key], port);
+                        partsOfNodes[partsOfNodes.ElementAt(j).Key].isSideSnapped = SnappingEnum.SNAP_CENTER;
+                        partsTree.addPartToTree(partsOfNodes[tempNode], partsOfNodes[partsOfNodes.ElementAt(j).Key]);
+                    }
+                }
             }
             
         }
@@ -159,6 +170,10 @@ public class PartCreator : MonoBehaviour
                     connectingPoint = item.connectedObject.frontSnapPoints[1];
                     connectingPoint = connectingPoint + connectedObjPos;
                 }
+                else if (port.fieldName == "exitCenterSnap")
+                {
+                    connectingPoint = connectedObjPos;
+                }
 
 
                 if (item.thisObject.isSideSnapped == SnappingEnum.SNAP_SIDE)
@@ -178,6 +193,11 @@ public class PartCreator : MonoBehaviour
                     float angle = Vector3.SignedAngle(connectedPositionNormal, thisPositionNormal, Vector3.up);
                     Debug.Log(angle);
                     item.thisObject.partObject.transform.RotateAround(connectingPoint, new Vector3(0f, 1, 0f), -angle);
+                }
+                else if(item.thisObject.isSideSnapped == SnappingEnum.SNAP_CENTER)
+                {
+                    Vector3 translateVector = connectingPoint - item.thisObject.partObject.transform.position;
+                    item.thisObject.partObject.transform.Translate(translateVector);
                 }
                 else 
                 {
