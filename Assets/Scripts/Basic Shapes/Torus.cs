@@ -56,7 +56,7 @@ public class Torus : Part
                     normal.y = 0;
                     Vector3 centerLine = normal * (innerRadius + outerRadius);
 
-                    if((Vector3.Distance(position, centerLine) <= innerRadius))
+                    if((Vector3.Distance(position, centerLine) <= outerRadius) && (Vector3.Distance(position, new Vector3(0,0,0)) >= innerRadius))
                     {
                         corners.Add(position);
                     }

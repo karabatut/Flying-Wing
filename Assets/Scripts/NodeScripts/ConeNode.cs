@@ -21,7 +21,6 @@ public class ConeNode : BaseNode
     public int subdivisionMax;
     public int baseRadiusMin;
     public int baseRadiusMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -46,7 +45,7 @@ public class ConeNode : BaseNode
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

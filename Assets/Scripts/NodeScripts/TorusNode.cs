@@ -19,9 +19,6 @@ public class TorusNode : BaseNode
     public int outerRadiusMax;
     public int innerRadiusMin;
     public int innerRadiusMax;
-    public int thirdParamMin;
-    public int thirdParamMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -41,12 +38,12 @@ public class TorusNode : BaseNode
     }
     public override int[] GetThirdParameter()
     {
-        int[] thirdParam = { thirdParamMin, thirdParamMax };
+        int[] thirdParam = { 0, 0 };
         return thirdParam;
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

@@ -20,7 +20,6 @@ public class TriangleNode : BaseNode
     public int tipPositionXMax;
     public int tipPositionYMin;
     public int tipPositionYMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -46,7 +45,7 @@ public class TriangleNode : BaseNode
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

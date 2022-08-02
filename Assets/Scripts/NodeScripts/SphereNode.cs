@@ -16,11 +16,6 @@ public class SphereNode : BaseNode
 
     public int radiusMin;
     public int radiusMax;
-    public int subdivisionMin;
-    public int subdivisionMax;
-    public int baseRadiusMin;
-    public int baseRadiusMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -30,22 +25,22 @@ public class SphereNode : BaseNode
 
     public override int[] GetFirstParameter()
     {
-        int[] lengthMargins = { radiusMin, radiusMax };
-        return lengthMargins;
+        int[] radiusMargins = { radiusMin, radiusMax };
+        return radiusMargins;
     }
     public override int[] GetSecondParameter()
     {
-        int[] subdivisionMargins = { subdivisionMin, subdivisionMax };
-        return subdivisionMargins;
+        int[] temp = { 0, 0 };
+        return temp;
     }
     public override int[] GetThirdParameter()
     {
-        int[] radiusMargins = { baseRadiusMin, baseRadiusMax };
-        return radiusMargins;
+        int[] temp = { 0, 0 };
+        return temp;
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

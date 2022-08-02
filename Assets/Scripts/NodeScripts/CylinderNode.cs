@@ -20,7 +20,6 @@ public class CylinderNode : BaseNode
     public int subdivisionMax;
     public int radiusMin;
     public int radiusMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -45,7 +44,7 @@ public class CylinderNode : BaseNode
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

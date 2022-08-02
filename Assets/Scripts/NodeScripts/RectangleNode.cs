@@ -20,7 +20,6 @@ public class RectangleNode : BaseNode
     public int widthMax;
     public int heightMin;
     public int heightMax;
-    public int snapPoints;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -45,7 +44,7 @@ public class RectangleNode : BaseNode
     }
     public override int GetFourthParameter()
     {
-        return snapPoints;
+        return 0;
     }
     public override SnappingEnum IsSideSnapped()
     {

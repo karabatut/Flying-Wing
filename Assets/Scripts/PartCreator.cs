@@ -155,7 +155,6 @@ public class PartCreator : MonoBehaviour
                 {
                     int snapCountConnected = item.connectedObject.sideSnapPoints.Count;
                     int randomsnapConnected = Random.Range(0, snapCountConnected);
-                    //randomsnapConnected = 5;
                     connectingPoint = item.connectedObject.sideSnapPoints[randomsnapConnected];
                     connectingPoint = connectingPoint + connectedObjPos;
 
@@ -180,7 +179,6 @@ public class PartCreator : MonoBehaviour
                 {
                     int snapCountThisObj = item.thisObject.sideSnapPoints.Count;
                     int randomsnapThisObj = Random.Range(0, snapCountThisObj);
-                    //randomsnapThisObj = 0;
 
                     Vector3 translateVector = connectingPoint - item.thisObject.sideSnapPoints[randomsnapThisObj];
                     Vector2 thisObjectPos = new Vector2(item.thisObject.sideSnapPoints[randomsnapThisObj].x + translateVector.x, item.thisObject.sideSnapPoints[randomsnapThisObj].z + translateVector.z);
