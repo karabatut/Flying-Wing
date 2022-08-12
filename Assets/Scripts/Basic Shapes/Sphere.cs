@@ -44,8 +44,8 @@ public class Sphere : Part
         Vector3 secondCenter = new Vector3(-centerDistance / 2, 0f, 0f);
         
         int a = radius + centerDistance / 2;
-        int b = (int)Mathf.Sqrt(a * a - radius * radius);
-        if(b == 0)
+        int b = (int)Mathf.Sqrt(a * a - (centerDistance/2) * (centerDistance/2));
+        if (b == 0)
         {
             b = radius;
         }

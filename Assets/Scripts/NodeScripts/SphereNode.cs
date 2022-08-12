@@ -16,6 +16,8 @@ public class SphereNode : BaseNode
 
     public int radiusMin;
     public int radiusMax;
+    public int distanceMin;
+    public int distanceMax;
     public int probabilityPercentage;
 
     public override object GetValue(NodePort port)
@@ -30,7 +32,7 @@ public class SphereNode : BaseNode
     }
     public override int[] GetSecondParameter()
     {
-        int[] temp = { 0, 0 };
+        int[] temp = { distanceMin, distanceMax };
         return temp;
     }
     public override int[] GetThirdParameter()
