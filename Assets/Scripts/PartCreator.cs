@@ -10,7 +10,6 @@ public class PartCreator : MonoBehaviour
 {
 
     public MeshRenderer meshRenderer;
-    public MeshFilter meshFilter;
     public ShapeGrammar ruleNodes;
     List<BaseNode> grammarRule;
     Dictionary<BaseNode, Part> partsOfNodes = new Dictionary<BaseNode, Part>();
@@ -51,16 +50,6 @@ public class PartCreator : MonoBehaviour
             }
 
             Part newPart = part.CreatePart(node.GetFirstParameter(), node.GetSecondParameter(), node.GetThirdParameter(), node.GetFourthParameter());
-
-            /*foreach (Vector3 point in newPart.sideSnapPoints)
-            {
-                GameObject go = Instantiate(new GameObject(), point, Quaternion.identity);
-            }
-
-            foreach (Vector3 point in newPart.frontSnapPoints)
-            {
-                GameObject go = Instantiate(new GameObject(), point, Quaternion.identity);
-            }*/
 
             partObject.AddComponent<MeshFilter>();
             partObject.AddComponent<MeshRenderer>();
@@ -233,14 +222,45 @@ public class PartCreator : MonoBehaviour
 
         foreach (BaseNode baseNode in ruleNodes.nodes)
         {
-            
+            if (baseNode.GetInputPort("frontSnap").Connection != null)
+            {
+                BaseNode tempNode = baseNode.GetInputPort("frontSnap").Connection.node as BaseNode;
+                if (!grammarRule.Contains(tempNode))
+                {
+                    continue;
+                }
+            }
+            if (baseNode.GetInputPort("sideSnap").Connection != null)
+            {
+                BaseNode tempNode = baseNode.GetInputPort("sideSnap").Connection.node as BaseNode;
+                if (!grammarRule.Contains(tempNode))
+                {
+                    continue;
+                }
+            }
+            if (baseNode.GetInputPort("aftSnap").Connection != null)
+            {
+                BaseNode tempNode = baseNode.GetInputPort("aftSnap").Connection.node as BaseNode;
+                if (!grammarRule.Contains(tempNode))
+                {
+                    continue;
+                }
+            }
+            if (baseNode.GetInputPort("centerSnap").Connection != null)
+            {
+                BaseNode tempNode = baseNode.GetInputPort("centerSnap").Connection.node as BaseNode;
+                if (!grammarRule.Contains(tempNode))
+                {
+                    continue;
+                }
+            }
+
             int probability = baseNode.GetProbability();
 
             int chance = Random.Range(0, 100);
             if(chance <= probability)
             {
                 grammarRule.Add(baseNode);
-
             }
         }
 

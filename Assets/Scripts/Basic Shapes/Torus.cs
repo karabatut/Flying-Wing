@@ -65,10 +65,10 @@ public class Torus : Part
             }
         }
 
-        this.sideSnapPoints.Add(new Vector3(totalRadius / 2, 0, 0));
-        this.sideSnapPoints.Add(new Vector3(0, 0, totalRadius / 2));
-        this.sideSnapPoints.Add(new Vector3(-totalRadius / 2, 0, 0));
-        this.sideSnapPoints.Add(new Vector3(0, 0, -totalRadius / 2));
+        this.sideSnapPoints.Add(new Vector3(totalRadius , 0, 0));
+        this.sideSnapPoints.Add(new Vector3(0, 0, totalRadius ));
+        this.sideSnapPoints.Add(new Vector3(-totalRadius , 0, 0));
+        this.sideSnapPoints.Add(new Vector3(0, 0, -totalRadius));
 
         this.frontSnapPoints.Add(new Vector3(0, outerRadius / 2, 0));
         this.frontSnapPoints.Add(new Vector3(0, -outerRadius / 2, 0));

@@ -71,8 +71,8 @@ public class Sphere : Part
         this.sideSnapPoints.Add(new Vector3(0, 0, b));
         this.sideSnapPoints.Add(new Vector3(0, 0, -b));
 
-        this.frontSnapPoints.Add(new Vector3(0, radius, 0));
-        this.frontSnapPoints.Add(new Vector3(0, -radius, 0));
+        this.frontSnapPoints.Add(new Vector3(0, b, 0));
+        this.frontSnapPoints.Add(new Vector3(0, -b, 0));
         
         foreach (Vector3 position in corners)
         {

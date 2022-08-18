@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 528430488}
   - component: {fileID: 528430487}
-  - component: {fileID: 528430486}
   - component: {fileID: 528430485}
   m_Layer: 0
   m_Name: GameObject
@@ -179,14 +178,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &528430486
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528430484}
-  m_Mesh: {fileID: 0}
 --- !u!114 &528430487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,8 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 528430485}
-  meshFilter: {fileID: 528430486}
-  ruleNodes: {fileID: 11400000, guid: e3e3dab070ee4cb44ab0f8d7bb9834bf, type: 2}
+  ruleNodes: {fileID: 11400000, guid: 0a8de6918642f6147bdfc07dc55c7b5e, type: 2}
 --- !u!4 &528430488
 Transform:
   m_ObjectHideFlags: 0
