@@ -15,6 +15,7 @@ public class Cylinder : Part
     public Dictionary<Vector3, Vector3> sideSnapPointsWNormals { get; set; }
     public int radius { get; set; }
     public SnappingEnum isSideSnapped { get; set; }
+    public List<Color> vertexColors { get; set; }
 
     public Cylinder()
     {
@@ -26,11 +27,12 @@ public class Cylinder : Part
         this.sideSnapPoints = new List<Vector3>();
         this.frontSnapPoints = new List<Vector3>();
         this.sideSnapPointsWNormals = new Dictionary<Vector3, Vector3>();
+        this.vertexColors = new List<Color>();
     }
 
     MeshCreator meshCreator = new MeshCreator();
 
-    public Part CreatePart(int[] lengthMargins, int[] subdivisionMargins, int[] radiusMargins, int snapPoints)
+    public Part CreatePart(int[] lengthMargins, int[] subdivisionMargins, int[] radiusMargins, int snapPoints, ColorParameters colorParameters)
     {
         int length;
         int sides;
@@ -115,6 +117,6 @@ public class Cylinder : Part
         this.frontSnapPoints.Add(new Vector3(0f, length/2, 0f));
         this.frontSnapPoints.Add(new Vector3(0f, -length / 2, 0f));
 
-        return meshCreator.CreateMesh(this);
+        return meshCreator.CreateMesh(this, colorParameters);
     }
 }

@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class MeshCreator 
 {
-
+    
+    
     public Part AddVoxelToChunk(Vector3 position, Part part)
     {
         List<Vector3> vertices = part.vertices;
         List<int> triangles = part.triangles;
         List<Vector2> uvs = part.uvs;
         int vertexIndex = part.vertexIndex;
+        List<Color> vertexColors = part.vertexColors;
 
         List<Vector3> verticesTemp = new List<Vector3>();
+        
 
         for (int k = 0; k < 6; k++)
         {
@@ -21,8 +24,6 @@ public class MeshCreator
                 int triangleIndex = VoxelData.voxelTris[k, i];
 
 
-
-                //vertices.Add(VoxelData.voxelVerts[triangleIndex] + position);
 
                 if(!verticesTemp.Contains(VoxelData.voxelVerts[triangleIndex] + position))
                 {
@@ -44,11 +45,12 @@ public class MeshCreator
                     vertexIndex++;
                 }
 
-
-                
             }
+            
             vertices.AddRange(verticesTemp);
+
             verticesTemp.Clear();
+
         }
 
 
@@ -57,60 +59,13 @@ public class MeshCreator
         part.triangles = triangles;
         part.uvs = uvs;
         part.vertexIndex = vertexIndex;
+        
 
-
-
-       /* for (int i = 0; i < 6; i++)
-        {
-            for (int k = 0; k < 6; k++)
-            {
-                int index = VoxelData.triangles[6*i+k];
-                Vector3 vector = VoxelData.vertices[index] + position;
-                if (!verticesTemp.Contains(vector))
-                {
-                    verticesTemp.Add(vector);
-                }
-                
-                triangles.Add(index + vertexIndex * 8);
-            }
-            vertices.AddRange(verticesTemp);
-        }*/
-
-        /*foreach (int vertex in VoxelData.triangles)
-        {
-            Vector3 vector = VoxelData.vertices[vertex] + position;
-            vertices.Add(vector);
-            triangles.Add(vertex + vertexIndex * 8);
-        }*/
-
-        /*part.vertices = vertices;
-        part.triangles = triangles;
-        vertexIndex++;
-        part.vertexIndex = vertexIndex;*/
-
-        /*foreach (Vector3 item in VoxelData.vertices)
-        {
-            Vector3 vector = item + position;
-            vertices.Add(vector);
-            uvs.Add(new Vector2(1, 1));
-        }
-
-        part.vertices = vertices;
-        foreach (int item in VoxelData.triangles)
-        {
-            triangles.Add(item + vertexIndex * 8);
-        }
-
-        part.triangles = triangles;
-        part.uvs = uvs;
-
-        vertexIndex++;
-        part.vertexIndex = vertexIndex;*/
 
         return part;
     }
 
-    public Part CreateMesh(Part part)
+    public Part CreateMesh(Part part, ColorParameters colorParameters)
     {
         Mesh mesh = part.mesh;
 
@@ -118,14 +73,60 @@ public class MeshCreator
         {
             mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
         }
+        List<Color> vertexColorsTemp = new List<Color>();
+
+        int primaryProb = colorParameters.primaryColorProbability;
+        int secondaryProb = primaryProb + colorParameters.secondaryColorProbability;
+        int tertiaryProb = secondaryProb + colorParameters.tertiaryColorProbability;
+        int quternaryProb = tertiaryProb + colorParameters.quternaryColorProbability;
+
+        for (int i = 0; i < part.vertices.Count; i = i+24)
+        {
+            int randomNum = Random.Range(0, 100);
+            if (randomNum <= primaryProb)
+            {
+                for (int j = 0; j < 24; j++)
+                {
+                    vertexColorsTemp.Add(colorParameters.primaryColor);
+                }
+                
+            }
+            else if(randomNum > primaryProb && randomNum <= secondaryProb)
+            {
+                for (int j = 0; j < 24; j++)
+                {
+                    vertexColorsTemp.Add(colorParameters.secondaryColor);
+                }
+            }
+            else if(randomNum > secondaryProb && randomNum <= tertiaryProb)
+            {
+                for (int j = 0; j < 24; j++)
+                {
+                    vertexColorsTemp.Add(colorParameters.tertiaryColor);
+                }
+            }
+            else
+            {
+                for (int j = 0; j < 24; j++)
+                {
+                    vertexColorsTemp.Add(colorParameters.quternaryColor);
+                }
+            }
+        }
+
+        part.vertexColors = vertexColorsTemp;
 
         mesh.vertices = part.vertices.ToArray();
         mesh.triangles = part.triangles.ToArray();
         mesh.uv = part.uvs.ToArray();
 
+        mesh.colors = part.vertexColors.ToArray();
         mesh.RecalculateNormals();
+        
         part.mesh = mesh;
 
         return part;
     }
+
+   
 }

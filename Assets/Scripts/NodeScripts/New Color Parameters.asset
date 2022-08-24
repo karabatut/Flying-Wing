@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b183cf89350dc43a25ec5ad3884507, type: 3}
+  m_Name: New Color Parameters
+  m_EditorClassIdentifier: 
+  primaryColor: {r: 0, g: 0.16862746, b: 0.35686275, a: 0}
+  primaryColorProbability: 80
+  secondaryColor: {r: 0.16862746, g: 0.28235295, b: 0.39607847, a: 0}
+  secondaryColorProbability: 15
+  tertiaryColor: {r: 0.14509805, g: 0.427451, b: 0.52156866, a: 0}
+  tertiaryColorProbability: 4
+  quternaryColor: {r: 0.56078434, g: 0.89019614, b: 0.8117648, a: 0}
+  quternaryColorProbability: 1

@@ -9,6 +9,7 @@ public interface Part
     List<Vector2> uvs { get; set; }
     int vertexIndex { get; set; }
     Mesh mesh { get; set; }
+    List<Color> vertexColors { get; set; }
 
     GameObject partObject { get; set; }
 
@@ -17,5 +18,5 @@ public interface Part
     SnappingEnum isSideSnapped { get; set; }
     Dictionary<Vector3, Vector3> sideSnapPointsWNormals { get; set; }
 
-    Part CreatePart(int[] firstParam, int[] secondParam, int[] thirdParam, int fourthParam);
+    Part CreatePart(int[] firstParam, int[] secondParam, int[] thirdParam, int fourthParam, ColorParameters colorParameter);
 }

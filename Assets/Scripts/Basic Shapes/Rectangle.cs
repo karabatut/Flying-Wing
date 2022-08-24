@@ -15,6 +15,7 @@ public class Rectangle : Part
     public GameObject partObject { get; set; }
     public Dictionary<Vector3, Vector3> sideSnapPointsWNormals { get; set; }
     public SnappingEnum isSideSnapped { get; set; }
+    public List<Color> vertexColors { get; set; }
 
 
     public Rectangle()
@@ -26,10 +27,11 @@ public class Rectangle : Part
         this.mesh = new Mesh();
         this.sideSnapPoints = new List<Vector3>();
         this.frontSnapPoints = new List<Vector3>();
+        this.vertexColors = new List<Color>();
     }
     MeshCreator meshCreator = new MeshCreator();
 
-    public Part CreatePart(int[] lengthMargins, int[] widthMargins, int[] heightMargins, int fourthParam)
+    public Part CreatePart(int[] lengthMargins, int[] widthMargins, int[] heightMargins, int fourthParam, ColorParameters colorParameters)
     {
         int length;
         int width;
@@ -73,6 +75,6 @@ public class Rectangle : Part
             this.vertexIndex = part.vertexIndex;
             this.vertices = part.vertices;
         }
-        return meshCreator.CreateMesh(this);
+        return meshCreator.CreateMesh(this, colorParameters);
     }
 }

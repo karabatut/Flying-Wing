@@ -14,6 +14,7 @@ public class Torus : Part
     public GameObject partObject { get; set; }
     public Dictionary<Vector3, Vector3> sideSnapPointsWNormals { get; set; }
     public SnappingEnum isSideSnapped { get; set; }
+    public List<Color> vertexColors { get; set; }
 
 
     public Torus()
@@ -25,12 +26,13 @@ public class Torus : Part
         this.mesh = new Mesh();
         this.sideSnapPoints = new List<Vector3>();
         this.frontSnapPoints = new List<Vector3>();
+        this.vertexColors = new List<Color>();
     }
 
 
     MeshCreator meshCreator = new MeshCreator();
 
-    public Part CreatePart(int[] outerRadiusMargins, int[] innerRadiusMargins, int[] thirdParam, int fourthParam)
+    public Part CreatePart(int[] outerRadiusMargins, int[] innerRadiusMargins, int[] thirdParam, int fourthParam, ColorParameters colorParameters)
     {
 
         int innerRadius;
@@ -83,7 +85,7 @@ public class Torus : Part
             this.vertexIndex = part.vertexIndex;
             this.vertices = part.vertices;
         }
-        return meshCreator.CreateMesh(this);
+        return meshCreator.CreateMesh(this, colorParameters);
     }
 
 

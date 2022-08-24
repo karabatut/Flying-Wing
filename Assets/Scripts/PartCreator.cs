@@ -11,6 +11,7 @@ public class PartCreator : MonoBehaviour
 
     public MeshRenderer meshRenderer;
     public ShapeGrammar ruleNodes;
+    public ColorParameters colorParameters;
     List<BaseNode> grammarRule;
     Dictionary<BaseNode, Part> partsOfNodes = new Dictionary<BaseNode, Part>();
     Dictionary<Part, NodePort> partsOfNodesConnected = new Dictionary<Part, NodePort>();
@@ -49,7 +50,7 @@ public class PartCreator : MonoBehaviour
                 part = new Cone();
             }
 
-            Part newPart = part.CreatePart(node.GetFirstParameter(), node.GetSecondParameter(), node.GetThirdParameter(), node.GetFourthParameter());
+            Part newPart = part.CreatePart(node.GetFirstParameter(), node.GetSecondParameter(), node.GetThirdParameter(), node.GetFourthParameter(), colorParameters);
 
             partObject.AddComponent<MeshFilter>();
             partObject.AddComponent<MeshRenderer>();

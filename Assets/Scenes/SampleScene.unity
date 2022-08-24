@@ -191,7 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 528430485}
-  ruleNodes: {fileID: 11400000, guid: 0a8de6918642f6147bdfc07dc55c7b5e, type: 2}
+  ruleNodes: {fileID: 11400000, guid: e3e3dab070ee4cb44ab0f8d7bb9834bf, type: 2}
+  colorParameters: {fileID: 11400000, guid: 9828deefa6b946f42a400c95ea3aad9a, type: 2}
 --- !u!4 &528430488
 Transform:
   m_ObjectHideFlags: 0
