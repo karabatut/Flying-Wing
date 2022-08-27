@@ -53,15 +53,16 @@ public class Rectangle : Part
                 {
                     Vector3 position = new Vector3(i, j, k);
                     corners.Add(position);
-                    if((j == 0) && (i == 0))
-                    {
-                        this.sideSnapPoints.Add(position);
-                    }
+                   
                 }
                 
             }
         }
 
+        this.sideSnapPoints.Add(new Vector3(width /2, 0, 0));
+        this.sideSnapPoints.Add(new Vector3(-width /2, 0, 0));
+        this.sideSnapPoints.Add(new Vector3(0, 0, length/2));
+        this.sideSnapPoints.Add(new Vector3(0, 0, -length / 2));
         
         this.frontSnapPoints.Add(new Vector3(0, height / 2, 0));
         this.frontSnapPoints.Add(new Vector3(0, -height / 2, 0));

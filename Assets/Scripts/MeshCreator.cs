@@ -80,9 +80,11 @@ public class MeshCreator
         int tertiaryProb = secondaryProb + colorParameters.tertiaryColorProbability;
         int quternaryProb = tertiaryProb + colorParameters.quternaryColorProbability;
 
+        
+
         for (int i = 0; i < part.vertices.Count; i = i+24)
         {
-            int randomNum = Random.Range(0, 100);
+            int randomNum = Random.Range(0, quternaryProb);
             if (randomNum <= primaryProb)
             {
                 for (int j = 0; j < 24; j++)

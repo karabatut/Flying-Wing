@@ -1,0 +1,1196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8530157719842751154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68ac0ccd19836a4281d982a711f1595, type: 3}
+  m_Name: Rectangle
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: -120}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: frontSnap
+        node: {fileID: -4805689063911787010}
+        reroutePoints: []
+      - fieldName: frontSnap
+        node: {fileID: 3621159686886748176}
+        reroutePoints: []
+      - fieldName: frontSnap
+        node: {fileID: 3750347730929473071}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: centerSnap
+        node: {fileID: -4735219917312088759}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: centerSnap
+        node: {fileID: 5188504474347197835}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -8530157719842751154}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  lengthMin: 20
+  lengthMax: 35
+  widthMin: 10
+  widthMax: 12
+  heightMin: 30
+  heightMax: 40
+  probabilityPercentage: 100
+--- !u!114 &-5070272119684574648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198182549859e564ea53f6bc087cd2b0, type: 3}
+  m_Name: Cylinder
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -664}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitFrontSnap
+        node: {fileID: -4735219917312088759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -5070272119684574648}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  lengthMin: 15
+  lengthMax: 20
+  subdivisionMin: 6
+  subdivisionMax: 6
+  radiusMin: 5
+  radiusMax: 7
+  probabilityPercentage: 100
+--- !u!114 &-4805689063911787010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26908330bec7dbe49971a8d0b3555ab4, type: 3}
+  m_Name: Triangle
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -72, y: -696}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: -8530157719842751154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -4805689063911787010}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  baseStartMin: 20
+  baseStartMax: 45
+  tipPositionXMin: -15
+  tipPositionXMax: 15
+  tipPositionYMin: 20
+  tipPositionYMax: 35
+  probabilityPercentage: 100
+--- !u!114 &-4735219917312088759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21bd318efabd0c41b0775eb26271e13, type: 3}
+  m_Name: Sphere
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 216, y: -344}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitFrontSnap
+        node: {fileID: -8530157719842751154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: centerSnap
+        node: {fileID: -476758701484978384}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: aftSnap
+        node: {fileID: -5070272119684574648}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -4735219917312088759}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  radiusMin: 3
+  radiusMax: 5
+  distanceMin: 10
+  distanceMax: 20
+  probabilityPercentage: 100
+--- !u!114 &-3146727867772426516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198182549859e564ea53f6bc087cd2b0, type: 3}
+  m_Name: Cylinder
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 424}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: 5188504474347197835}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -3146727867772426516}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  lengthMin: 5
+  lengthMax: 10
+  subdivisionMin: 6
+  subdivisionMax: 6
+  radiusMin: 3
+  radiusMax: 7
+  probabilityPercentage: 100
+--- !u!114 &-476758701484978384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21bd318efabd0c41b0775eb26271e13, type: 3}
+  m_Name: Sphere
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -280}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: -4735219917312088759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: -476758701484978384}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  radiusMin: 2
+  radiusMax: 3
+  distanceMin: 5
+  distanceMax: 7
+  probabilityPercentage: 100
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2004fec652a4724fb7ba3b73dbc27f4, type: 3}
+  m_Name: New Shape Grammar
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8530157719842751154}
+  - {fileID: 5188504474347197835}
+  - {fileID: 3916821659175302284}
+  - {fileID: -3146727867772426516}
+  - {fileID: -4805689063911787010}
+  - {fileID: 3621159686886748176}
+  - {fileID: -4735219917312088759}
+  - {fileID: -5070272119684574648}
+  - {fileID: -476758701484978384}
+  - {fileID: 3750347730929473071}
+  current: {fileID: 0}
+--- !u!114 &3621159686886748176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26908330bec7dbe49971a8d0b3555ab4, type: 3}
+  m_Name: Triangle
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -696}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: -8530157719842751154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: 3621159686886748176}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  baseStartMin: 20
+  baseStartMax: 45
+  tipPositionXMin: -15
+  tipPositionXMax: 15
+  tipPositionYMin: 20
+  tipPositionYMax: 35
+  probabilityPercentage: 100
+--- !u!114 &3750347730929473071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26908330bec7dbe49971a8d0b3555ab4, type: 3}
+  m_Name: Triangle
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 184, y: -696}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: -8530157719842751154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: 3750347730929473071}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  baseStartMin: 20
+  baseStartMax: 45
+  tipPositionXMin: -15
+  tipPositionXMax: 15
+  tipPositionYMin: 20
+  tipPositionYMax: 35
+  probabilityPercentage: 100
+--- !u!114 &3916821659175302284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198182549859e564ea53f6bc087cd2b0, type: 3}
+  m_Name: Cylinder
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: 56}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitSideSnap
+        node: {fileID: 5188504474347197835}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: 3916821659175302284}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  lengthMin: 5
+  lengthMax: 10
+  subdivisionMin: 6
+  subdivisionMax: 6
+  radiusMin: 3
+  radiusMax: 7
+  probabilityPercentage: 100
+--- !u!114 &5188504474347197835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68ac0ccd19836a4281d982a711f1595, type: 3}
+  m_Name: Rectangle
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: 72}
+  ports:
+    keys:
+    - sideSnap
+    - frontSnap
+    - aftSnap
+    - centerSnap
+    - exitSideSnap
+    - exitFrontSnap
+    - exitAftSnap
+    - exitCenterSnap
+    values:
+    - _fieldName: sideSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: frontSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: aftSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: centerSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exitAftSnap
+        node: {fileID: -8530157719842751154}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitSideSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: frontSnap
+        node: {fileID: 3916821659175302284}
+        reroutePoints: []
+      - fieldName: frontSnap
+        node: {fileID: -3146727867772426516}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitFrontSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitAftSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exitCenterSnap
+      _node: {fileID: 5188504474347197835}
+      _typeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  sideSnap: 0
+  frontSnap: 0
+  aftSnap: 0
+  centerSnap: 0
+  exitSideSnap: 0
+  exitFrontSnap: 0
+  exitAftSnap: 0
+  exitCenterSnap: 0
+  lengthMin: 15
+  lengthMax: 20
+  widthMin: 3
+  widthMax: 5
+  heightMin: 3
+  heightMax: 5
+  probabilityPercentage: 100

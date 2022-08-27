@@ -28,26 +28,32 @@ public class PartCreator : MonoBehaviour
             if (node.GetType() == typeof(CylinderNode))
             {
                 part = new Cylinder();
+                partObject.name = "Cylinder";
             }
             else if(node.GetType() == typeof(TriangleNode))
             {
                 part = new Triangle();
+                partObject.name = "Triangle";
             }
             else if(node.GetType() == typeof(SphereNode))
             {
                 part = new Sphere();
+                partObject.name = "Sphere";
             }
             else if (node.GetType() == typeof(RectangleNode))
             {
                 part = new Rectangle();
+                partObject.name = "Rectangle";
             }
             else if(node.GetType() == typeof(TorusNode))
             {
                 part = new Torus();
+                partObject.name = "Torus";
             }
             else
             {
                 part = new Cone();
+                partObject.name = "Cone";
             }
 
             Part newPart = part.CreatePart(node.GetFirstParameter(), node.GetSecondParameter(), node.GetThirdParameter(), node.GetFourthParameter(), colorParameters);
@@ -206,6 +212,7 @@ public class PartCreator : MonoBehaviour
                     //item.thisObject.partObject.transform.Rotate(item.connectedObject.partObject.transform.rotation.eulerAngles);
                 
                 }
+                item.thisObject.partObject.transform.parent = item.connectedObject.partObject.transform;
             }
         }
 
