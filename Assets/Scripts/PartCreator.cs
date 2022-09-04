@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using XNode;
 using Random = UnityEngine.Random;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public class PartCreator : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class PartCreator : MonoBehaviour
     Dictionary<Part, NodePort> partsOfNodesConnected = new Dictionary<Part, NodePort>();
     void Start()
     {
+        Stopwatch stopWatch = new Stopwatch();
+        stopWatch.Start();
+
         createRuleSet();
         PartsTree partsTree = new PartsTree();
 
@@ -185,7 +190,6 @@ public class PartCreator : MonoBehaviour
                     Vector3 thisPositionNormal = new Vector3(item.thisObject.partObject.transform.position.x - connectingPoint.x,0, item.thisObject.partObject.transform.position.z - connectingPoint.z);
 
                     float angle = Vector3.SignedAngle(connectedPositionNormal, thisPositionNormal, Vector3.up);
-                    Debug.Log(angle);
                     item.thisObject.partObject.transform.RotateAround(connectingPoint, new Vector3(0f, 1, 0f), -angle);
                 }
                 else if(item.thisObject.isSideSnapped == SnappingEnum.SNAP_CENTER)
@@ -215,6 +219,15 @@ public class PartCreator : MonoBehaviour
                 item.thisObject.partObject.transform.parent = item.connectedObject.partObject.transform;
             }
         }
+
+        stopWatch.Stop();
+        TimeSpan ts = stopWatch.Elapsed;
+
+        // Format and display the TimeSpan value.
+        string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds,
+            ts.Milliseconds / 10);
+        Debug.Log(elapsedTime);
 
     }
 

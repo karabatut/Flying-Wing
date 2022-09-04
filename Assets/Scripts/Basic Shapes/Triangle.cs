@@ -42,12 +42,16 @@ public class Triangle : Part
 
         int baseStartYValue = Random.Range(baseStartMargins[0], baseStartMargins[1]); //3,20
         int baseEndYValue = -baseStartYValue/2;
-        int tipYValue = Random.Range(tipPositionXMargins[0], tipPositionXMargins[1]); //0,30
-        int tipXValue = Random.Range(tipPositionYMargins[0], tipPositionYMargins[1]); //3, 20
+        int tipXValue = Random.Range(tipPositionXMargins[0], tipPositionXMargins[1]); //0,30
+        int tipYValue = Random.Range(tipPositionYMargins[0], tipPositionYMargins[1]); //3, 20
 
         baseStart = new Vector3(-tipXValue/2, baseStartYValue/2, 0f);
         baseEnd = new Vector3(-tipXValue/2, baseEndYValue, 0f);
         tip = new Vector3(tipXValue/2, tipYValue, 0f);
+
+        Debug.Log("baseStart: " + baseStart);
+        Debug.Log("baseEnd: " + baseEnd);
+        Debug.Log("tip: " + tip);
 
         length = baseStartYValue - baseEndYValue;
 

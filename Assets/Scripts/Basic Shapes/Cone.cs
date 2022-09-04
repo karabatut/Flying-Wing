@@ -33,7 +33,6 @@ public class Cone : Part
     public Part CreatePart(int[] lengthMargins, int[] subdivisionMargins, int[] baseRadiusMargins, int snapPoints, ColorParameters colorParameters)
     {
         int length;
-        int sides;
         int baseRadius;
 
         int previousRadius = 0;
@@ -41,7 +40,6 @@ public class Cone : Part
         Part part;
 
         length = Random.Range(lengthMargins[0], lengthMargins[1]); 
-        sides = Random.Range(subdivisionMargins[0], subdivisionMargins[1]); 
         baseRadius = Random.Range(baseRadiusMargins[0], baseRadiusMargins[1]); 
 
         List<Vector3> corners = new List<Vector3>();

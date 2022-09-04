@@ -17,8 +17,6 @@ public class ConeNode : BaseNode
 
     public int lengthMin;
     public int lengthMax;
-    public int subdivisionMin;
-    public int subdivisionMax;
     public int baseRadiusMin;
     public int baseRadiusMax;
     public int probabilityPercentage;
@@ -35,8 +33,8 @@ public class ConeNode : BaseNode
     }
     public override int[] GetSecondParameter()
     {
-        int[] subdivisionMargins = { subdivisionMin, subdivisionMax };
-        return subdivisionMargins;
+        int[] temp = { 0, 0 };
+        return temp;
     }
     public override int[] GetThirdParameter()
     {
